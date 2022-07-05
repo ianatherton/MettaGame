@@ -98,6 +98,10 @@ shape = SubResource( 3 )
 [node name="player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 80, 376 )
 
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( 11, -5 )
+current = true
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 autoplay = true

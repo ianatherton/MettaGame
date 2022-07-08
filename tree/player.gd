@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var velocity = Vector2(0,0)
 var faceright = true #direction player is facing
-const SPEED = 5 #gravity constant for falling speed
+const SPEED = 2.3 #gravity constant for falling speed
 const JUMP = -100
 
 
@@ -34,4 +34,4 @@ func _physics_process(delta):
 	velocity.y = velocity.y + SPEED #adds speed to y velocity every frame additively
 	velocity = move_and_slide(velocity) #updates velocity to itself
 	
-	velocity.x = lerp(velocity.x,0,0.01)
+	velocity.x = lerp(velocity.x,0,0.005)

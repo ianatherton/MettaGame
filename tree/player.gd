@@ -13,7 +13,7 @@ func _physics_process(delta):
 	#pass
 	if Input.is_action_pressed("up"):
 		velocity.y = JUMP
-		$butterflysprite.play("Jump")
+#		$butterflysprite.play("Jump")
 	elif Input.is_action_pressed("right"):
 		$butterflysprite.flip_h = false # $=accesses child of root node
 		$butterflysprite.play("Idle")

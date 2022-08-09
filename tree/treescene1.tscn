@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://art/grasslandground_1.png" type="Texture" id=1]
 [ext_resource path="res://art/TSet_World1.tres" type="TileSet" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://sfx/prelude in c.wav" type="AudioStream" id=4]
 [ext_resource path="res://art/TSet_clouds.tres" type="TileSet" id=5]
 [ext_resource path="res://art/blueskybackground_1.png" type="Texture" id=6]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64, 64 )
@@ -92,3 +93,27 @@ scale = Vector2( 0.35, 0.35 )
 tile_set = ExtResource( 2 )
 format = 1
 tile_data = PoolIntArray( 196620, 9, 0, 262156, 9, 0, 393140, 9, 0, 327776, 9, 0, 393271, 9, 0, 393282, 9, 0, 524198, 9, 0, 589756, 9, 0, 589757, 9, 0, 524308, 9, 0, 655294, 9, 0, 589854, 9, 0, 589855, 9, 0, 589906, 9, 0, 720872, 9, 0, 720873, 9, 0, 655396, 9, 0, 655420, 9, 0, 655430, 9, 0, 655431, 9, 0, 655467, 9, 0, 786287, 9, 0, 786288, 9, 0, 786382, 9, 0, 786419, 9, 0, 720936, 9, 0, 851843, 9, 0, 851938, 9, 0, 851939, 9, 0, 851940, 9, 0, 786471, 9, 0, 786484, 9, 0, 786485, 9, 0, 786486, 9, 0, 786554, 9, 0, 917461, 9, 0, 917462, 9, 0, 917463, 9, 0, 851975, 9, 0, 852036, 9, 0, 982943, 9, 0, 982944, 9, 0, 982945, 9, 0, 982996, 9, 0, 982997, 9, 0, 917506, 9, 0, 917511, 9, 0, 1048441, 9, 0, 1048459, 9, 0, 1048487, 9, 0, 1048514, 9, 0, 1048515, 9, 0, 1048516, 9, 0, 1048558, 0, 0, 983118, 0, 0, 983142, 0, 0, 983185, 9, 0, 1114007, 9, 0, 1114008, 9, 0, 1114047, 9, 0, 1114048, 9, 0, 1114049, 9, 0, 1048594, 0, 0, 1048595, 0, 0, 1048686, 9, 0, 1179522, 9, 0, 1179523, 9, 0, 1179562, 9, 0, 1114130, 9, 0, 1114131, 9, 0, 1114132, 9, 0, 1114208, 9, 0, 1245071, 9, 0, 1245101, 9, 0, 1245151, 9, 0, 1245177, 9, 0, 1179734, 0, 0, 1310638, 9, 0, 1310639, 9, 0, 1310640, 9, 0, 1310641, 9, 0, 1310685, 9, 0, 1245333, 9, 0, 1245334, 9, 0, 1376245, 9, 0, 1310726, 9, 0, 1310749, 9, 0, 1310750, 9, 0, 1310751, 9, 0, 1310752, 9, 0, 1310753, 9, 0, 1310754, 9, 0, 1441782, 9, 0, 1441783, 9, 0, 1441784, 9, 0, 1441785, 9, 0, 1441786, 9, 0, 1441787, 9, 0, 1376352, 9, 0, 1441922, 9, 0, 1441923, 9, 0, 1441924, 9, 0, 1507443, 9, 0 )
+
+[node name="Coin" parent="." instance=ExtResource( 7 )]
+position = Vector2( -283.912, 549.22 )
+
+[node name="Coin2" parent="." instance=ExtResource( 7 )]
+position = Vector2( -187.38, 225.951 )
+
+[node name="Coin3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 169.563, 158.603 )
+
+[node name="Coin4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 771.203, 199.011 )
+
+[node name="Coin5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1361.62, 142.888 )
+
+[node name="Coin6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1934.08, -234.259 )
+
+[node name="Coin7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2535.72, -413.853 )
+
+[node name="Coin8" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2960.01, -876.308 )

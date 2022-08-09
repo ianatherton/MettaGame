@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://art/OBJ_cloud1.1.png" type="Texture" id=1]
+[ext_resource path="res://AnimatedSprite.gd" type="Script" id=2]
+[ext_resource path="res://coin.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 173.104
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "spin",
+"speed": 5.0
+} ]
+
+[node name="Coin" type="Area2D"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.723769, 0.723769 )
+frames = SubResource( 2 )
+animation = "spin"
+script = ExtResource( 2 )

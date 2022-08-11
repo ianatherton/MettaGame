@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var velocity = Vector2(0,0)
 var faceright = true #direction player is facing
+var word = 0
 const SPEED = 2.3 #gravity constant for falling speed
 const JUMP = -100
 
@@ -18,7 +19,7 @@ func _physics_process(delta):
 		$butterflysprite.flip_h = false # $=accesses child of root node
 		$butterflysprite.play("Idle")
 		velocity.x = 100
-		print("X:",velocity.x,"Y:", velocity.y)
+		print("word:",word)
 	elif Input.is_action_pressed("left"):
 		$butterflysprite.flip_h = true
 		$butterflysprite.play("Idle")

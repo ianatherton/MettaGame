@@ -1,8 +1,8 @@
 extends AnimatedSprite
-
+var rotspd = 0.5
 
 func _process(delta):
 	
-	rotation += 0.5 * delta
+	rotation += rotspd * delta
 	
 	pass

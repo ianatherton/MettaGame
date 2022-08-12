@@ -5,7 +5,7 @@ var faceright = true #direction player is facing
 var word = 0
 const SPEED = 2.3 #gravity constant for falling speed
 const JUMP = -100
-
+#var metta ["this","is","what","should","be","done,","by","one","who","is","skilled","in","goodness","having"]
 
 	
 
@@ -19,7 +19,7 @@ func _physics_process(delta):
 		$butterflysprite.flip_h = false # $=accesses child of root node
 		$butterflysprite.play("Idle")
 		velocity.x = 100
-		print("word:",word)
+		#print("word:",word)
 	elif Input.is_action_pressed("left"):
 		$butterflysprite.flip_h = true
 		$butterflysprite.play("Idle")

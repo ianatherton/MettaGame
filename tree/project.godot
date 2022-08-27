@@ -11,12 +11,12 @@ config_version=4
 [application]
 
 config/name="tree"
-run/main_scene="res://treescene1.tscn"
+run/main_scene="res://levels/treescene1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-GameManager="*res://GameManager.gd"
+GameManager="*res://scripts/GameManager.gd"
 
 [display]
 
@@ -52,4 +52,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://art/default_env.tres"

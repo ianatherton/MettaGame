@@ -10,7 +10,7 @@
 [node name="Level1" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource( 3 )]
-position = Vector2( -993.083, 626.809 )
+position = Vector2( -3286.94, 488.216 )
 z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -27,13 +27,6 @@ z_index = -2
 tile_set = ExtResource( 2 )
 format = 1
 tile_data = PoolIntArray( -196541, 1, 0, -131019, 1, 0, -65488, 1, 0, -65473, 1, 0, -65464, 536870913, 0, 58, 1, 0, 67, 536870913, 0, 65589, 1, 0, 131109, 536870913, 0, 131115, 1, 0, 131120, 1, 0, 196665, 1, 0, 196675, 536870913, 0, 262183, 1, 0, 262190, 1, 0, 262195, 1, 0, 327723, 1, 0, 393216, 1, 0, 393254, 0, 0, 393255, 1, 0, 393263, 0, 0, 458794, 1, 0, 458801, 1, 0, 458802, 0, 0, 458808, 0, 0, 589773, 1, 0, 524308, 1, 0, 524323, 0, 0, 524330, 0, 0, 655314, 1, 0, 655316, 1, 0, 655321, 1, 0, 655329, 1, 0, 655331, 8, 0, 655349, 1, 0, 655359, 1, 0, 589836, 1, 0, 589841, 1, 0, 589844, 3, 0, 589847, 4, 0, 589861, 1, 0, 589866, 1, 0, 589876, 0, 0, 720859, 1, 0, 720860, 6, 0, 720867, 10, 0, 720875, 4, 0, 720889, 1, 0, 720894, 1, 0, 655361, 4, 0, 655367, 1, 0, 655373, 4, 0, 655381, 1, 0, 655386, 6, 0, 655399, 536870925, 0, 655406, 536870925, 0, 655413, 1, 0, 786386, 1, 0, 786396, 10, 0, 786397, 1, 0, 786403, 1, 0, 786407, 1, 0, 786409, 4, 0, 786416, 1, 0, 786417, 6, 0, 786421, 1, 0, 786426, 5, 0, 720898, 1, 0, 720903, 3, 0, 720913, 1, 0, 720922, 1, 0, 720929, 1, 0, 720936, 1073741838, 0, 851928, 11, 0, 851933, 10, 0, 851940, 10, 0, 851948, 1, 0, 786452, 6, 0, 786455, 6, 0, 917471, 10, 0, 917485, 1, 0, 917500, 1, 0, 851968, 1, 0, 851972, 6, 0, 851978, 1, 0, 851983, 1, 0, 852002, 1073741838, 0, 852009, 536870925, 0, 983015, 1, 0, 983027, 1, 0, 983033, 1, 0, 917510, 1, 0, 917526, 1, 0, 1048557, 1, 0, 1048565, 536870925, 0, 983042, 11, 0, 983055, 536870925, 0, 983070, 1073741838, 0, 983074, 536870925, 0, 983083, 1073741838, 0, 1114089, 536870925, 0, 1114090, 11, 0, 1114095, 8, 0, 1114108, 10, 0, 1048578, 536870925, 0, 1048579, 1, 0, 1048586, 1, 0, 1048591, 1, 0, 1048592, 1, 0, 1048599, 536870925, 0, 1048613, 1073741838, 0, 1179633, 11, 0, 1179643, 10, 0, 1179645, 1, 0, 1114120, 11, 0, 1114140, 536870925, 0, 1245168, 536870925, 0, 1179653, 11, 0, 1245191, 536870925, 0, 1310739, 536870925, 0, 1441792, 536870925, 0 )
-
-[node name="Blueskybackground1" type="Sprite" parent="TileMap World"]
-visible = false
-position = Vector2( 653.499, 489.786 )
-scale = Vector2( 67.0391, 37.8984 )
-z_index = -2
-texture = ExtResource( 6 )
 
 [node name="TileMap Details" type="TileMap" parent="."]
 z_index = -1
@@ -54,15 +47,27 @@ texture = ExtResource( 6 )
 centered = false
 
 [node name="Clouds 1 Far" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_scale = Vector2( 0.2, 0.2 )
 
 [node name="TileMap" type="TileMap" parent="ParallaxBackground/Clouds 1 Far"]
-modulate = Color( 0.803922, 0.803922, 0.803922, 1 )
+modulate = Color( 0.866667, 0.866667, 0.866667, 1 )
 tile_set = ExtResource( 5 )
 format = 1
 tile_data = PoolIntArray( -2883622, 8, 0, -2359232, 7, 0, -2031668, 7, 0, -1900564, 4, 0, -1704011, 8, 0, -1441756, 3, 0, -1376220, 3, 0, -1310711, 4, 0, -851920, 8, 0, -655389, 3, 0, -524305, 5, 0, -393272, 3, 0, -458719, 7, 0, -327694, 8, 0, -327667, 3, 0, -327652, 6, 0, -196608, 5, 0, -196548, 4, 0, 21, 4, 0, 45, 5, 0, 196550, 3, 0, 196578, 4, 0, 131081, 4, 0, 196609, 6, 0, 327669, 3, 0, 262152, 6, 0, 262177, 1, 0, 458720, 8, 0, 458743, 7, 0, 458818, 8, 0, 1638380, 3, 0, 1638438, 3, 0 )
 
+[node name="FarfarBG" type="ParallaxLayer" parent="ParallaxBackground"]
+scale = Vector2( 0.4, 0.4 )
+motion_scale = Vector2( 0.1, 0.1 )
+
+[node name="TileMap" type="TileMap" parent="ParallaxBackground/FarfarBG"]
+modulate = Color( 0.87451, 0.87451, 0.87451, 1 )
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( -852006, 15, 0, -917408, 15, 0, -786446, 15, 0, -720852, 15, 0, -524332, 16, 0, -589798, 15, 0, -458753, 16, 0, -524245, 16, 0, -393270, 16, 0, -393245, 16, 0, -458732, 16, 0, -458656, 16, 0, -458646, 16, 0, -327695, 16, 0, -393145, 16, 0, -262210, 16, 0, -262199, 16, 0, -262137, 16, 0, -262090, 16, 0, -262047, 16, 0, -131156, 16, 0, -131107, 16, 0, -131096, 16, 0, -196580, 16, 0, -196569, 16, 0, -65585, 16, 0, -131002, 16, 0, -61, 16, 0, -65536, 16, 0, -65484, 16, 0, -65439, 16, 0, 65461, 16, 0, 65473, 16, 0, 88, 16, 0, 98, 16, 0, 130971, 16, 0, 131038, 16, 0, 65556, 16, 0, 65584, 16, 0, 65608, 16, 0, 196529, 16, 0, 196530, 16, 0, 196594, 16, 0, 196602, 16, 0, 262081, 16, 0, 196646, 16, 0, 196678, 16, 0, 327637, 16, 0, 262145, 16, 0, 262160, 16, 0, 262177, 1, 0, 262252, 16, 0, 393110, 16, 0, 393122, 16, 0, 393192, 16, 0, 327743, 16, 0, 327765, 16, 0, 327778, 16, 0, 458642, 16, 0, 458695, 16, 0, 458720, 8, 0, 393244, 16, 0, 524211, 16, 0, 458798, 16, 0, 589816, 16, 0, 524297, 16, 0, 524361, 16, 0, 524370, 16, 0, 655243, 16, 0, 655254, 16, 0, 655272, 16, 0, 655333, 16, 0, 720832, 16, 0, 720852, 16, 0, 655401, 16, 0, 655427, 16, 0, 655472, 16, 0, 786312, 16, 0, 786324, 16, 0, 720927, 16, 0, 851878, 16, 0, 851901, 16, 0, 786440, 16, 0, 786496, 16, 0, 786529, 16, 0, 983118, 16, 0, 1114162, 16, 0 )
+
 [node name="Clouds 2 Nearer" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 scale = Vector2( 2, 2 )
 motion_scale = Vector2( 0.4, 0.4 )
 
@@ -84,124 +89,124 @@ tile_data = PoolIntArray( 786287, 9, 0, 786554, 9, 0, 983185, 9, 0, 1048594, 0, 
 [node name="objects" type="Node" parent="."]
 
 [node name="Wisp" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -694.843, 556.397 )
+position = Vector2( -1151.47, 558.516 )
 
 [node name="Wisp34" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -593.02, 513.971 )
+position = Vector2( -1286.97, 530.922 )
 
 [node name="Wisp21" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -1161.54, 610.368 )
+position = Vector2( -1437, 503.362 )
 
 [node name="Wisp22" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -1328.22, 561.159 )
+position = Vector2( -1584.61, 486.997 )
 
 [node name="Wisp23" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -1486.96, 519.886 )
+position = Vector2( -1729.58, 497.637 )
 
 [node name="Wisp24" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -1634.58, 465.915 )
+position = Vector2( -1874.02, 509.353 )
 
 [node name="Wisp25" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -1791.74, 423.055 )
+position = Vector2( -2013.17, 502.515 )
 
 [node name="Wisp26" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -1964.76, 429.405 )
+position = Vector2( -2138.51, 491.913 )
 
 [node name="Wisp27" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -2113.98, 494.488 )
+position = Vector2( -2261.25, 473.299 )
 
 [node name="Wisp28" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -2244.15, 419.88 )
+position = Vector2( -2377.64, 441.069 )
 
 [node name="Wisp29" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -2391.77, 377.02 )
+position = Vector2( -2497.72, 424.696 )
 
 [node name="Wisp30" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -2545.75, 377.02 )
+position = Vector2( -2615.67, 446.945 )
 
 [node name="Wisp31" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -2660.05, 457.978 )
+position = Vector2( -2726.8, 468.573 )
 
 [node name="Wisp32" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -2799.74, 497.663 )
+position = Vector2( -2847.42, 474.355 )
 
 [node name="Wisp33" parent="objects" instance=ExtResource( 7 )]
 position = Vector2( -2944.19, 494.488 )
 
 [node name="Wisp13" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -466.277, 498.809 )
+position = Vector2( -1002.37, 593.101 )
 
 [node name="Wisp14" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -337.894, 530.396 )
+position = Vector2( -843.258, 605.618 )
 
 [node name="Wisp15" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -225.453, 470.701 )
+position = Vector2( -553.887, 522.615 )
 
 [node name="Wisp16" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -176.841, 369.66 )
+position = Vector2( -691.74, 573.077 )
 
 [node name="Wisp35" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -146.14, 252.804 )
+position = Vector2( -411.006, 488.005 )
 
 [node name="Wisp17" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 16.402, 82.1071 )
+position = Vector2( -128.744, 473.049 )
 
 [node name="Wisp18" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 152.344, 98.3365 )
+position = Vector2( -0.218689, 400.283 )
 
 [node name="Wisp19" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 273.868, 37.3004 )
+position = Vector2( 94.8188, 264.026 )
 
 [node name="Wisp20" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 523.894, -19.9321 )
+position = Vector2( 321.537, 6.55449 )
 
 [node name="Wisp2" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( -95.8414, 138.915 )
+position = Vector2( -268.534, 474.765 )
 
 [node name="Wisp3" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 396.65, -46.5837 )
+position = Vector2( 186.876, 72.0762 )
 
 [node name="Wisp4" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 641.526, 40.435 )
+position = Vector2( 479.428, 22.4241 )
 
 [node name="Wisp36" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 754.663, 127.409 )
+position = Vector2( 625.409, 89.2683 )
 
 [node name="Wisp37" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 860.729, 226.404 )
+position = Vector2( 741.01, 200.977 )
 
 [node name="Wisp38" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 970.331, 340.248 )
+position = Vector2( 851.671, 299.988 )
 
 [node name="Wisp39" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 1108.22, 372.775 )
+position = Vector2( 956.717, 419.391 )
 
 [node name="Wisp5" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 1209.14, 262.59 )
+position = Vector2( 1084.12, 444.818 )
 
 [node name="Wisp40" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 1342.78, 190.465 )
+position = Vector2( 1229.42, 401.298 )
 
 [node name="Wisp41" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 1482.79, 170.666 )
+position = Vector2( 1519.7, 310.315 )
 
 [node name="Wisp42" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 1586.73, 237.134 )
+position = Vector2( 1390.73, 375.924 )
 
 [node name="Wisp6" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 1700.59, 313.527 )
+position = Vector2( 1656.59, 311.527 )
 
 [node name="Wisp43" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 1787.9, 402.617 )
+position = Vector2( 1773.9, 400.617 )
 
 [node name="Wisp44" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 1853.82, 505.961 )
+position = Vector2( 1859.82, 504.961 )
 
 [node name="Wisp45" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 1946.48, 566.542 )
+position = Vector2( 1957.48, 566.542 )
 
 [node name="Wisp46" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 2056.95, 592.378 )
+position = Vector2( 2065.95, 571.378 )
 
 [node name="Wisp47" parent="objects" instance=ExtResource( 7 )]
 position = Vector2( 2170.09, 588.815 )

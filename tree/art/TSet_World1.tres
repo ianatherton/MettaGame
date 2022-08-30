@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=12 format=2]
+[gd_resource type="TileSet" load_steps=16 format=2]
 
 [ext_resource path="res://art/BG_grass1.png" type="Texture" id=1]
 [ext_resource path="res://art/BG_grassrock1.png" type="Texture" id=2]
@@ -10,9 +10,17 @@
 [ext_resource path="res://art/BG_cliff2.png" type="Texture" id=8]
 [ext_resource path="res://art/BG_mountain1.png" type="Texture" id=9]
 [ext_resource path="res://art/treeline.png" type="Texture" id=10]
+[ext_resource path="res://art/BG_grassrock2.png" type="Texture" id=11]
+[ext_resource path="res://art/BG_grassrock3.png" type="Texture" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 63.6, 108.76, 147.12, 81.4001, 283.92, 55.48, 450.96, 74.2, 391.92, 221.08, 174.48, 245.56, 18.96, 111.64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 175, 26, 213, 56, 241, 81, 262, 261, 160, 365, 36, 370, 30, 140, 55, 66, 88, 35, 131, 24 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 19, 72, 33, 58, 145, 45, 324, 41, 416, 49, 428, 73, 364, 202, 254, 184, 145, 231, 48, 171 )
 
 [resource]
 0/name = "BG_tree3.png 0"
@@ -260,3 +268,45 @@ points = PoolVector2Array( 63.6, 108.76, 147.12, 81.4001, 283.92, 55.48, 450.96,
 16/shape_one_way_margin = 0.0
 16/shapes = [  ]
 16/z_index = 0
+17/name = "BG_grassrock2.png 17"
+17/texture = ExtResource( 11 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 99, 107, 292, 393 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape = SubResource( 4 )
+17/shape_one_way = false
+17/shape_one_way_margin = 1.0
+17/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+17/z_index = 0
+18/name = "BG_grassrock3.png 18"
+18/texture = ExtResource( 12 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 51, 196, 445, 257 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape = SubResource( 5 )
+18/shape_one_way = false
+18/shape_one_way_margin = 1.0
+18/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+18/z_index = 0

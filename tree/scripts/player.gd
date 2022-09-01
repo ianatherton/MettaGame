@@ -3,8 +3,8 @@ extends KinematicBody2D
 var velocity = Vector2(0,0)
 var faceright = true #direction player is facing
 var word = 0
-const SPEED = 1.5 #gravity constant for falling speed
-const JUMP = -100
+export var SPEED = 1.5 #gravity constant for falling speed
+export var JUMP = -100
 #var metta ["this","is","what","should","be","done,","by","one","who","is","skilled","in","goodness","having"]
 
 	

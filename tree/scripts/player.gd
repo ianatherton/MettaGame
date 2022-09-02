@@ -12,6 +12,13 @@ export var JUMP = -100
 
 func _physics_process(delta):
 	#pass
+	if Input.is_action_just_released("mute"):
+		if GameManager.mute == false:
+			GameManager.mute = true
+			$AudioStreamPlayer.playing = false
+		else:
+			GameManager.mute = false
+			$AudioStreamPlayer.playing = true
 	if Input.is_action_pressed("up"):
 		velocity.y = JUMP
 #		$butterflysprite.play("Jump")

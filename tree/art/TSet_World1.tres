@@ -14,13 +14,13 @@
 [ext_resource path="res://art/BG_grassrock3.png" type="Texture" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 63.6, 108.76, 147.12, 81.4001, 283.92, 55.48, 450.96, 74.2, 391.92, 221.08, 174.48, 245.56, 18.96, 111.64 )
+points = PoolVector2Array( 86, 99, 147.12, 81.4001, 273, 55, 431, 76, 382, 218, 188, 238, 71, 122 )
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
-points = PoolVector2Array( 175, 26, 213, 56, 241, 81, 262, 261, 160, 365, 36, 370, 30, 140, 55, 66, 88, 35, 131, 24 )
+points = PoolVector2Array( 173, 53, 203, 71, 229, 99, 238, 221, 166, 335, 66, 358, 54, 155, 65, 88, 94, 63, 135, 47 )
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
-points = PoolVector2Array( 19, 72, 33, 58, 145, 45, 324, 41, 416, 49, 428, 73, 364, 202, 254, 184, 145, 231, 48, 171 )
+points = PoolVector2Array( 44, 92, 62, 66, 148, 62, 321, 55, 386, 61, 405, 81, 357, 190, 257, 173, 146, 221, 52, 163 )
 
 [resource]
 0/name = "BG_tree3.png 0"

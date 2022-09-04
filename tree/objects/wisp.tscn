@@ -8,7 +8,7 @@
 [ext_resource path="res://art/cloud_fade_sheet.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 53.0599, 259.697 )
+extents = Vector2( 53.0599, 1717.21 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
@@ -53,7 +53,7 @@ font_data = ExtResource( 5 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.24926, -0.683067 )
+position = Vector2( -1.24926, -4.44019 )
 shape = SubResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="tree"
-run/main_scene="res://levels/treescene1.tscn"
+run/main_scene="res://levels/breathe.tscn"
 config/icon="res://icon.png"
 
 [autoload]

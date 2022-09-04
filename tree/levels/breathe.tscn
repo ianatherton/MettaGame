@@ -9,6 +9,7 @@
 [node name="Game" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource( 3 )]
+position = Vector2( -3262.35, 309.683 )
 
 [node name="TileMap World" type="TileMap" parent="."]
 z_index = -2
@@ -25,12 +26,12 @@ tile_data = PoolIntArray( -21297739, 536870921, 0, -13498872, 536870912, 0, -123
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="Bluesky BG" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Bluesky BG" type="Sprite" parent="ParallaxBackground"]
 position = Vector2( -4807.6, -4145.69 )
 scale = Vector2( 40, 40 )
-motion_mirroring = Vector2( 128, 128 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Bluesky BG"]
+position = Vector2( 16.9852, 7.77827 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 6 )
 centered = false
@@ -149,7 +150,7 @@ position = Vector2( 3284.74, -253.803 )
 position = Vector2( 3174.8, -204.045 )
 
 [node name="Wisp71" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 3075.69, -223.93 )
+position = Vector2( 3069.34, -201.706 )
 
 [node name="Wisp59" parent="objects" instance=ExtResource( 7 )]
 position = Vector2( 2822.59, -120.31 )

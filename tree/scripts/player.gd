@@ -37,6 +37,10 @@ func _physics_process(delta):
 		#print("player jumping", "X:",velocity.x,"Y:", velocity.y)
 	elif Input.is_action_pressed("escape"):
 		get_tree().quit()
+		
+	elif Input.is_action_just_released("f1"):
+		OS.set_window_fullscreen(!OS.window_fullscreen)
+		print('fullscreen pls')
 	else :
 		$butterflysprite.play("Idle")
 

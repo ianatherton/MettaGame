@@ -35,6 +35,8 @@ func _physics_process(delta):
 		#print("X:",velocity.x,"Y:", velocity.y)
 
 		#print("player jumping", "X:",velocity.x,"Y:", velocity.y)
+	elif Input.is_action_pressed("escape"):
+		get_tree().quit()
 	else :
 		$butterflysprite.play("Idle")
 

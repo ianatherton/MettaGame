@@ -31,7 +31,7 @@ position = Vector2( -4807.6, -4145.69 )
 scale = Vector2( 40, 40 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Bluesky BG"]
-position = Vector2( 16.9852, 7.77827 )
+position = Vector2( 50.0893, 45.6878 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 6 )
 centered = false
@@ -139,6 +139,48 @@ position = Vector2( 832.379, 392.268 )
 
 [node name="Wisp43" parent="objects" instance=ExtResource( 7 )]
 position = Vector2( 596.74, 391.959 )
+
+[node name="Wisp62" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 4611.05, -570.558 )
+
+[node name="Wisp63" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 4490.8, -575.666 )
+
+[node name="Wisp64" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 4375.21, -579.648 )
+
+[node name="Wisp72" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 4259.13, -565.591 )
+
+[node name="Wisp65" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 4022.99, -569.452 )
+
+[node name="Wisp73" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 4142.79, -568.819 )
+
+[node name="Wisp74" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 3907.15, -569.128 )
+
+[node name="Wisp82" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 6333.83, 1640.28 )
+
+[node name="Wisp83" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 6196.61, 1700.23 )
+
+[node name="Wisp84" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 5945.26, 1786.75 )
+
+[node name="Wisp85" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 5803.72, 1775.35 )
+
+[node name="Wisp86" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 5561.92, 1712.1 )
+
+[node name="Wisp87" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 5687.38, 1712.73 )
+
+[node name="Wisp88" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 5395.17, 1726.56 )
 
 [node name="Wisp56" parent="objects" instance=ExtResource( 7 )]
 position = Vector2( 3410.64, -271.324 )

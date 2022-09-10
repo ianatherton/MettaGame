@@ -132,27 +132,6 @@ position = Vector2( 3451.75, -236.31 )
 [node name="Wisp64" parent="objects" instance=ExtResource( 7 )]
 position = Vector2( 3310.93, -231.302 )
 
-[node name="Wisp6" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 5038.61, 894.877 )
-
-[node name="Wisp65" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 4960.47, 598.827 )
-
-[node name="Wisp68" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 4988.87, 1240.81 )
-
-[node name="Wisp67" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 4779.85, 1372.7 )
-
-[node name="Wisp69" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 5050.12, 400.979 )
-
-[node name="Wisp70" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 5147.19, 169.662 )
-
-[node name="Wisp71" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 5078.22, -162.98 )
-
 [node name="Wisp72" parent="objects" instance=ExtResource( 7 )]
 position = Vector2( 4218.92, -259.875 )
 

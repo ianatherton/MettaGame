@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://objects/portal_breath.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/TSet_World1.tres" type="TileSet" id=2]
 [ext_resource path="res://objects/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/portal_metta.tscn" type="PackedScene" id=4]
 [ext_resource path="res://art/TSet_clouds.tres" type="TileSet" id=5]
 [ext_resource path="res://art/blueskybackground_1.png" type="Texture" id=6]
 
@@ -77,5 +78,8 @@ tile_data = PoolIntArray( 327509, 536870921, 0, 327543, 536870921, 0, 458592, 53
 
 [node name="objects" type="Node" parent="."]
 
-[node name="Wisp" parent="." instance=ExtResource( 1 )]
-position = Vector2( -2757.23, 282.696 )
+[node name="portal" parent="." instance=ExtResource( 4 )]
+position = Vector2( -3613.91, 282.715 )
+
+[node name="portal2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2794.88, 294.488 )

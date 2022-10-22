@@ -45,7 +45,7 @@ func _physics_process(delta):
 	elif Input.is_action_just_released("f2"): #reset level
 		#var context = get_tree().get_current_scene().filename #load name of current level scene
 		get_tree().reload_current_scene()
-		print('reset level')
+		print('reset level pls')
 	else :
 		$butterflysprite.play("Idle")
 

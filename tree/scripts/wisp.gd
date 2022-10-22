@@ -16,9 +16,9 @@ func _on_Wisp_body_entered(body):
 				$CollisionShape2D.queue_free()
 		if context == "res://levels/breathe.tscn":
 			GameManager.breathewisps = GameManager.breathewisps + 1 #increment global var +1
-			if GameManager.breathewisps > 7:
+			if GameManager.breathewisps > 4:
 				GameManager.breathewisps = 1
-			if GameManager.breathewisps <= 7:
+			if GameManager.breathewisps <= 4:
 			#if GameManager.metta.size() > GameManager.wisps: #check if array size is big enough for GameManager.wisps index
 				#GameManager.wisps = GameManager.wisps + 1
 				#print(GameManager.metta)

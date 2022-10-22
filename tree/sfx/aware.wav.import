@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/aware.wav-4ee3b89c4571404be51a5ef6fbb16ed8.sample"
+
+[deps]
+
+source_file="res://sfx/aware.wav"
+dest_files=[ "res://.import/aware.wav-4ee3b89c4571404be51a5ef6fbb16ed8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -19,8 +19,14 @@ func _physics_process(delta):
 		else:
 			GameManager.mute = false
 			$AudioStreamPlayer.playing = true
+	if Input.is_action_just_released("voice"):
+		if GameManager.vo == false:
+			GameManager.vo = true
+		else:
+			GameManager.vo = false
 	if Input.is_action_pressed("up"):
 		velocity.y = JUMP
+		$butterflysprite.speed_scale = 1.2
 #		$butterflysprite.play("Jump")
 	elif Input.is_action_pressed("right"):
 		$butterflysprite.flip_h = false # $=accesses child of root node
@@ -48,6 +54,7 @@ func _physics_process(delta):
 		print('reset level pls')
 	else :
 		$butterflysprite.play("Idle")
+		$butterflysprite.speed_scale = .777
 
 		
 	velocity.y = velocity.y + SPEED #adds speed to y velocity every frame additively

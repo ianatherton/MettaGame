@@ -51,7 +51,7 @@ __meta__ = {
 [node name="butterflysprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 2
+speed_scale = 0.777
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -75,4 +75,4 @@ margin_right = -39.0
 margin_bottom = -236.0
 rect_scale = Vector2( 1.333, 1.333 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Esc: End Game   F1: Toggle Fullscreen   F2: Restart Game   M: Toggle Music"
+text = "Esc: End Game   F1: Toggle Fullscreen   F2: Restart Game   M: Toggle Music   V: Toggle Voice Over"

@@ -27,7 +27,17 @@ func _on_Wisp_body_entered(body):
 				$AnimatedSprite.play("fade")
 				$AnimatedSprite.rotspd = 0
 				$CollisionShape2D.queue_free()
-				if GameManager.breathewisps == 1:
-					$sfxBreathein.playing = true
-					print("play sound pls")
-		
+				if GameManager.vo == true:
+					if GameManager.breathewisps == 1:
+						$sfxBreatheIn.playing = true
+						print("play sound pls")
+					if GameManager.breathewisps == 2:
+						$sfxAware.playing = true
+						print("play sound pls")
+					if GameManager.breathewisps == 3:
+						$sfxBreatheOut.playing = true
+						print("play sound pls")
+					if GameManager.breathewisps == 4:
+						$sfxAware.playing = true
+						print("play sound pls")
+			

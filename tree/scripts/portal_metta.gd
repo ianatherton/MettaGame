@@ -18,4 +18,4 @@ extends Area2D
 
 func _on_portal_body_entered(body):
 	if body.get_name() == "player": #check name of body collision
-		get_tree().change_scene("res://levels/treescene1.tscn")
+		SceneTransition.change_scene("res://levels/treescene1.tscn")

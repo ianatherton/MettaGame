@@ -69,6 +69,7 @@ position = Vector2( 11, -5 )
 current = true
 
 [node name="Label" type="Label" parent="."]
+visible = false
 margin_left = -623.0
 margin_top = -359.0
 margin_right = -39.0

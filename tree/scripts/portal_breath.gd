@@ -18,4 +18,4 @@ func _on_portal_body_entered(body):
 	var context = get_tree().get_current_scene().filename #load name of current level scene
 	print(context)  #check name of file name
 	if body.get_name() == "player": #check name of body collision
-		get_tree().change_scene("res://levels/breathe.tscn")
+		SceneTransition.change_scene("res://levels/breathe.tscn")

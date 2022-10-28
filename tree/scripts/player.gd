@@ -42,7 +42,11 @@ func _physics_process(delta):
 
 		#print("player jumping", "X:",velocity.x,"Y:", velocity.y)
 	elif Input.is_action_pressed("escape"):
-		get_tree().quit()
+		var context = get_tree().get_current_scene().filename
+		if context == "res://levels/menu.tscn":
+			get_tree().quit()
+		else :
+			SceneTransition.change_scene("res://levels/menu.tscn")
 		
 	elif Input.is_action_just_released("f1"):
 		OS.set_window_fullscreen(!OS.window_fullscreen)

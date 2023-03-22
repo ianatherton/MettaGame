@@ -5,14 +5,10 @@ var faceright = true #direction player is facing
 var word = 0
 export var SPEED = 1.5 #gravity constant for falling speed
 export var JUMP = -100
-#var metta ["this","is","what","should","be","done,","by","one","who","is","skilled","in","goodness","having"]
-
-	
-
 
 func _physics_process(delta):
-	#pass
-	if Input.is_action_just_released("mute"):
+	velocity.x = 0
+	if Input.is_action_just_released("mute"): #-------------INPUT-----#
 		if GameManager.mute == false:
 			GameManager.mute = true
 			$AudioStreamPlayer.playing = false
@@ -24,20 +20,20 @@ func _physics_process(delta):
 			GameManager.vo = true
 		else:
 			GameManager.vo = false
-	if Input.is_action_pressed("up"):
+	elif Input.is_action_pressed("up"):
 		velocity.y = JUMP
 		$butterflysprite.speed_scale = 1.2
 #		$butterflysprite.play("Jump")
 	elif Input.is_action_pressed("right"):
 		$butterflysprite.flip_h = false # $=accesses child of root node
 		$butterflysprite.play("Idle")
-		velocity.x = 80
+		velocity.x += 80
 		#print("word:",word)
 	elif Input.is_action_pressed("left"):
 		$butterflysprite.flip_h = true
 		$butterflysprite.play("Idle")
 		var faceright = false
-		velocity.x = -80
+		velocity.x += -80
 		#print("X:",velocity.x,"Y:", velocity.y)
 
 		#print("player jumping", "X:",velocity.x,"Y:", velocity.y)
@@ -65,3 +61,17 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity) #updates velocity to itself
 	
 	#velocity.x = lerp(velocity.x,0,0.005)
+
+
+func _on_ExitButton_pressed():
+	var context = get_tree().get_current_scene().filename
+	if context == "res://levels/menu.tscn":
+		get_tree().quit()
+	else :
+		SceneTransition.change_scene("res://levels/menu.tscn")
+
+
+func _on_FullscreenButton_pressed():
+	OS.set_window_fullscreen(!OS.window_fullscreen)
+	print('fullscreen pls')
+

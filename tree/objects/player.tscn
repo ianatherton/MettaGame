@@ -70,29 +70,48 @@ position = Vector2( 11, -5 )
 current = true
 
 [node name="Label" type="Label" parent="."]
-margin_left = -623.0
-margin_top = -359.0
-margin_right = -39.0
-margin_bottom = -236.0
+visible = false
+margin_left = -624.0
+margin_top = 285.0
+margin_right = -4.0
+margin_bottom = 408.0
 rect_scale = Vector2( 1.333, 1.333 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Esc: End Game   F1: Toggle Fullscreen   F2: Restart Game   M: Toggle Music   V: Toggle Voice Over"
 
 [node name="ExitButton" type="Button" parent="."]
-margin_left = -623.0
-margin_top = -338.0
-margin_right = -567.0
-margin_bottom = -296.0
+margin_left = -624.0
+margin_top = 306.0
+margin_right = -568.0
+margin_bottom = 348.0
 text = "Back"
 script = ExtResource( 5 )
 
 [node name="FullscreenButton" type="Button" parent="."]
-margin_left = -561.0
-margin_top = -338.0
-margin_right = -505.0
-margin_bottom = -296.0
-text = "Full Screen"
+margin_left = -562.0
+margin_top = 306.0
+margin_right = -484.0
+margin_bottom = 348.0
+text = "FullScreen"
+script = ExtResource( 5 )
+
+[node name="RestartButton" type="Button" parent="."]
+margin_left = -481.0
+margin_top = 307.0
+margin_right = -403.0
+margin_bottom = 349.0
+text = "Restart"
+script = ExtResource( 5 )
+
+[node name="MusicButton" type="Button" parent="."]
+margin_left = -399.0
+margin_top = 308.0
+margin_right = -306.0
+margin_bottom = 350.0
+text = "MusicOn/Off"
 script = ExtResource( 5 )
 
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="FullscreenButton" to="." method="_on_FullscreenButton_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="MusicButton" to="." method="_on_MusicButton_pressed"]

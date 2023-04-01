@@ -3,12 +3,20 @@ extends KinematicBody2D
 var velocity = Vector2(0,0)
 var faceright = true #direction player is facing
 var word = 0
-export var SPEED = 1.5 #gravity constant for falling speed
+export var SPEED = 1.1 #gravity constant for falling speed
 export var JUMP = -100
+var cursor_position = 0
 
+func _ready():
+	print('Ready Function go')
+	
 func _physics_process(delta):
 	velocity.x = 0
-	if Input.is_action_just_released("mute"): #-------------INPUT-----#
+###---INPUTS---###
+	if Input.is_action_pressed("left_click"):
+		cursor_position = get_global_mouse_position()
+		move_and_slide(cursor_position - self.position, Vector2.UP * (0.01 * SPEED) * delta)
+	if Input.is_action_just_released("mute"): 
 		if GameManager.mute == false:
 			GameManager.mute = true
 			$AudioStreamPlayer.playing = false
@@ -20,7 +28,7 @@ func _physics_process(delta):
 			GameManager.vo = true
 		else:
 			GameManager.vo = false
-	elif Input.is_action_pressed("up"):
+	elif Input.is_action_just_pressed("up"):
 		velocity.y = JUMP
 		$butterflysprite.speed_scale = 1.2
 #		$butterflysprite.play("Jump")
@@ -58,7 +66,7 @@ func _physics_process(delta):
 
 		
 	velocity.y = velocity.y + SPEED #adds speed to y velocity every frame additively
-	velocity = move_and_slide(velocity) #updates velocity to itself
+	velocity = move_and_slide(velocity) ###updates velocity to itself (gravity)###
 	
 	#velocity.x = lerp(velocity.x,0,0.005)
 
@@ -75,3 +83,17 @@ func _on_FullscreenButton_pressed():
 	OS.set_window_fullscreen(!OS.window_fullscreen)
 	print('fullscreen pls')
 
+
+
+func _on_RestartButton_pressed():
+	get_tree().reload_current_scene()
+	print('reset level pls')
+
+
+func _on_MusicButton_pressed():
+	if GameManager.mute == false:
+			GameManager.mute = true
+			$AudioStreamPlayer.playing = false
+	else:
+			GameManager.mute = false
+			$AudioStreamPlayer.playing = true

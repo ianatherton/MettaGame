@@ -1,99 +1,48 @@
+#import random
 extends KinematicBody2D
 
-var velocity = Vector2(0,0)
-var faceright = true #direction player is facing
+export var speed = 140
 var word = 0
-export var SPEED = 1.1 #gravity constant for falling speed
-export var JUMP = -100
-var cursor_position = 0
+
+var velocity = Vector2.ZERO
+var sprite
 
 func _ready():
-	print('Ready Function go')
+	sprite = $ButterflySprite
+	print('player ready!')
+
+func _process(delta):
+	# Calculate the direction vector towards the mouse
+	var mouse_pos = get_global_mouse_position()
+	var direction = (mouse_pos - global_position).normalized()
 	
-func _physics_process(delta):
-	velocity.x = 0
-###---INPUTS---###
-	if Input.is_action_pressed("left_click"):
-		cursor_position = get_global_mouse_position()
-		move_and_slide(cursor_position - self.position, Vector2.UP * (0.01 * SPEED) * delta)
-	if Input.is_action_just_released("mute"): 
-		if GameManager.mute == false:
-			GameManager.mute = true
-			$AudioStreamPlayer.playing = false
+	# Move the player towards the mouse when mouse button is held down
+	if Input.is_mouse_button_pressed(BUTTON_LEFT):
+		velocity = direction * speed
+		if direction.x > 0:
+			$butterflysprite.flip_h = false
 		else:
-			GameManager.mute = false
-			$AudioStreamPlayer.playing = true
-	if Input.is_action_just_released("voice"):
-		if GameManager.vo == false:
-			GameManager.vo = true
-		else:
-			GameManager.vo = false
-	elif Input.is_action_just_pressed("up"):
-		velocity.y = JUMP
-		$butterflysprite.speed_scale = 1.2
-#		$butterflysprite.play("Jump")
-	elif Input.is_action_pressed("right"):
-		$butterflysprite.flip_h = false # $=accesses child of root node
-		$butterflysprite.play("Idle")
-		velocity.x += 80
-		#print("word:",word)
-	elif Input.is_action_pressed("left"):
-		$butterflysprite.flip_h = true
-		$butterflysprite.play("Idle")
-		var faceright = false
-		velocity.x += -80
-		#print("X:",velocity.x,"Y:", velocity.y)
-
-		#print("player jumping", "X:",velocity.x,"Y:", velocity.y)
-	elif Input.is_action_pressed("escape"):
-		var context = get_tree().get_current_scene().filename
-		if context == "res://levels/menu.tscn":
-			get_tree().quit()
-		else :
-			SceneTransition.change_scene("res://levels/menu.tscn")
+			$butterflysprite.flip_h = true
+	else:
+		velocity = Vector2.ZERO
 		
-	elif Input.is_action_just_released("f1"):
-		OS.set_window_fullscreen(!OS.window_fullscreen)
-		print('fullscreen pls')
-		
-	elif Input.is_action_just_released("f2"): #reset level
-		#var context = get_tree().get_current_scene().filename #load name of current level scene
-		get_tree().reload_current_scene()
-		print('reset level pls')
-	else :
-		$butterflysprite.play("Idle")
-		$butterflysprite.speed_scale = .777
-
-		
-	velocity.y = velocity.y + SPEED #adds speed to y velocity every frame additively
-	velocity = move_and_slide(velocity) ###updates velocity to itself (gravity)###
-	
-	#velocity.x = lerp(velocity.x,0,0.005)
-
-
+	velocity = move_and_slide(velocity)
 func _on_ExitButton_pressed():
 	var context = get_tree().get_current_scene().filename
 	if context == "res://levels/menu.tscn":
 		get_tree().quit()
 	else :
 		SceneTransition.change_scene("res://levels/menu.tscn")
-
-
 func _on_FullscreenButton_pressed():
 	OS.set_window_fullscreen(!OS.window_fullscreen)
-	print('fullscreen pls')
-
-
-
+	print('fullscreen pls!')
 func _on_RestartButton_pressed():
 	get_tree().reload_current_scene()
-	print('reset level pls')
-
-
+	print('reset level pls!')
 func _on_MusicButton_pressed():
 	if GameManager.mute == false:
-			GameManager.mute = true
-			$AudioStreamPlayer.playing = false
+		GameManager.mute = true #mute
+		$AudioStreamPlayer.playing = false #mute
 	else:
-			GameManager.mute = false
-			$AudioStreamPlayer.playing = true
+		GameManager.mute = false #unmute
+		$AudioStreamPlayer.playing = true #unmute

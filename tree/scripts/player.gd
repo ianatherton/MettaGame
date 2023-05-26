@@ -1,7 +1,7 @@
 #import random
 extends KinematicBody2D
 
-export var speed = 140
+export var speed = 150
 var word = 0
 
 var velocity = Vector2.ZERO

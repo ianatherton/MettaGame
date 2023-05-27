@@ -2,7 +2,7 @@
 extends KinematicBody2D
 
 export var speed = 150
-var word = 0
+#var word = 0
 
 var velocity = Vector2.ZERO
 var sprite
@@ -10,6 +10,8 @@ var sprite
 func _ready():
 	sprite = $ButterflySprite
 	print('player ready!')
+	GameManager.breathewisps = 0
+	GameManager.wisps = 0
 
 func _process(delta):
 	# Calculate the direction vector towards the mouse

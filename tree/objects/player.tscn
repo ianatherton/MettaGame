@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://art/butterfly_1spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://scripts/player.gd" type="Script" id=2]
 [ext_resource path="res://art/butterfly_1f2.png" type="Texture" id=3]
 [ext_resource path="res://sfx/prelude in c.wav" type="AudioStream" id=4]
 [ext_resource path="res://objects/ExitButtonScript.gd" type="Script" id=5]
+[ext_resource path="res://art/vignette.png" type="Texture" id=6]
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
@@ -52,7 +53,6 @@ __meta__ = {
 [node name="butterflysprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 1
 speed_scale = 0.777
 playing = true
 
@@ -111,6 +111,12 @@ margin_right = -306.0
 margin_bottom = 350.0
 text = "MusicOn/Off"
 script = ExtResource( 5 )
+
+[node name="vignette" type="Sprite" parent="."]
+visible = false
+position = Vector2( 2, -2 )
+scale = Vector2( 1.216, 1.216 )
+texture = ExtResource( 6 )
 
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="FullscreenButton" to="." method="_on_FullscreenButton_pressed"]

@@ -21,7 +21,7 @@ func _process(delta): ###every frame###
 	var mouse_pos = get_global_mouse_position() # Calculate the direction vector towards the mouse
 	var direction = (mouse_pos - global_position).normalized()
 	if Input.is_action_just_pressed("escape"):
-		GameManager._backScreen()
+		backScreen()
 	if Input.is_mouse_button_pressed(BUTTON_LEFT): # Move the player towards the mouse when mouse button is held down
 		$butterflysprite.speed_scale = 1.1
 		velocity = direction * speed

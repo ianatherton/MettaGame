@@ -13,7 +13,8 @@ func load_data(): #load in all data we previously had saved
 	var file = File.new() #variable for save file
 	if not file.file_exists(SAVE_FILE): #if there is no file saved with name SAVE_FILE
 		g_data = { #fill saved variable dictionary
-			"musicsetting": 1 #variables i want to save
+			"musicSetting": 1, #variables i want to save
+			"fullscreenSetting": 0
 		}
 		save_data()
 	file.open(SAVE_FILE, File.READ)

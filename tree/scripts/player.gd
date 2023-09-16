@@ -21,6 +21,11 @@ func _ready(): ###room start###
 		$AudioStreamPlayer.playing = true
 	else:
 		$AudioStreamPlayer.playing = false
+	if SaveFile.game_data.has("fullscreenSetting"):
+		if SaveFile.game_data["fullscreenSetting"] == 1:
+			OS.set_window_fullscreen(true)
+		else:
+			OS.set_window_fullscreen(false)
 
 func _process(delta): ###every frame###
 	var mouse_pos = get_global_mouse_position() # Calculate the direction vector towards the mouse
@@ -48,7 +53,13 @@ func _process(delta): ###every frame###
 func _on_ExitButton_pressed():
 	backScreen()
 func _on_FullscreenButton_pressed():
-	OS.set_window_fullscreen(!OS.window_fullscreen)
+	if OS.is_window_fullscreen():
+		SaveFile.game_data["fullscreenSetting"] = 0
+		OS.set_window_fullscreen(false)
+	else:
+		SaveFile.game_data["fullscreenSetting"] = 1
+		OS.set_window_fullscreen(true)
+	SaveFile.save_data()
 	print('fullscreen pls!')
 	
 func _on_RestartButton_pressed():

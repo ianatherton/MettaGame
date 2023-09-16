@@ -7,3 +7,14 @@ var metta = ["null","This","is","what","should","be","done","By","one","who","is
 var breathemantra2 = ["null","Breathe in,","aware.","Breathe out,","aware."] #words to inspire attention, attentiveness, calmness, observing.
 var breathemantra = ["null","Breathing","in,","I","enjoy","my","in-breath.","Breathing","out,","I","enjoy","my","out-breath."]
 var vo = true
+
+func _ready():
+	SaveFile.load_data()
+	if SaveFile.game_data.has("musicSetting"):
+		print('loaded save file')
+		if SaveFile.game_data["musicSetting"] == 0:
+			print('read from save file')
+			mute = false
+		else:
+			print('read from save file')
+			mute = true

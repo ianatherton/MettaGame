@@ -65,7 +65,6 @@ shape = SubResource( 1 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 pitch_scale = 0.7
-autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 11, -5 )

@@ -1,5 +1,6 @@
 extends KinematicBody2D
 export var speed = 125
+onready var game_data = SaveFile.game_data
 
 var velocity = Vector2.ZERO
 var sprite
@@ -16,6 +17,10 @@ func _ready(): ###room start###
 	print('player ready!')
 	GameManager.breathewisps = 0
 	GameManager.wisps = 0
+	if GameManager.mute == false:
+		$AudioStreamPlayer.playing = true
+	else:
+		$AudioStreamPlayer.playing = false
 
 func _process(delta): ###every frame###
 	var mouse_pos = get_global_mouse_position() # Calculate the direction vector towards the mouse
@@ -52,8 +57,13 @@ func _on_RestartButton_pressed():
 	
 func _on_MusicButton_pressed():
 	if GameManager.mute == false:
-		GameManager.mute = true #mute
-		$AudioStreamPlayer.playing = false #mute
+		GameManager.mute = true
+		SaveFile.game_data["musicSetting"] = 1
+		SaveFile.save_data()
+		$AudioStreamPlayer.playing = false
 	else:
-		GameManager.mute = false #unmute
-		$AudioStreamPlayer.playing = true #unmute
+		GameManager.mute = false
+		SaveFile.game_data["musicSetting"] = 0
+		SaveFile.save_data()
+		$AudioStreamPlayer.playing = true
+	

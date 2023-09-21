@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://art/butterfly_1spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://scripts/player.gd" type="Script" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://sfx/prelude in c.wav" type="AudioStream" id=4]
 [ext_resource path="res://objects/ExitButtonScript.gd" type="Script" id=5]
 [ext_resource path="res://art/vignette.png" type="Texture" id=6]
+[ext_resource path="res://art/button_fullscreen.png" type="Texture" id=7]
+[ext_resource path="res://art/button_back.png" type="Texture" id=8]
+[ext_resource path="res://art/button_restart.png" type="Texture" id=9]
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
@@ -45,6 +48,7 @@ radius = 40.0
 height = 0.0
 
 [node name="player" type="KinematicBody2D"]
+position = Vector2( -127, -74 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -53,7 +57,6 @@ __meta__ = {
 [node name="butterflysprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 1
 speed_scale = 0.777
 playing = true
 
@@ -80,36 +83,46 @@ rect_scale = Vector2( 1.333, 1.333 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Esc: End Game   F1: Toggle Fullscreen   F2: Restart Game   M: Toggle Music   V: Toggle Voice Over"
 
-[node name="ExitButton" type="Button" parent="."]
-margin_left = -624.0
-margin_top = 306.0
-margin_right = -568.0
-margin_bottom = 348.0
-text = "Back"
+[node name="ExitButton" type="TextureButton" parent="."]
+margin_left = -625.0
+margin_top = 301.0
+margin_right = 399.0
+margin_bottom = 1325.0
+rect_scale = Vector2( 0.05, 0.05 )
+texture_normal = ExtResource( 8 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="FullscreenButton" type="TextureButton" parent="."]
+margin_left = -567.0
+margin_top = 300.0
+margin_right = 457.0
+margin_bottom = 1324.0
+rect_scale = Vector2( 0.05, 0.05 )
+texture_normal = ExtResource( 7 )
 script = ExtResource( 5 )
 
-[node name="FullscreenButton" type="Button" parent="."]
-margin_left = -562.0
-margin_top = 306.0
-margin_right = -484.0
-margin_bottom = 348.0
-text = "FullScreen"
+[node name="RestartButton" type="TextureButton" parent="."]
+margin_left = -1004.0
+margin_top = -191.0
+margin_right = 19.9999
+margin_bottom = 833.0
+rect_rotation = -93.3
+rect_scale = Vector2( 0.05, 0.05 )
+rect_pivot_offset = Vector2( 516.904, 516.029 )
+hint_tooltip = "Restart the scene."
+texture_normal = ExtResource( 9 )
 script = ExtResource( 5 )
 
-[node name="RestartButton" type="Button" parent="."]
-margin_left = -481.0
-margin_top = 307.0
-margin_right = -403.0
-margin_bottom = 349.0
-text = "Restart"
-script = ExtResource( 5 )
-
-[node name="MusicButton" type="Button" parent="."]
-margin_left = -399.0
-margin_top = 308.0
-margin_right = -306.0
-margin_bottom = 350.0
-text = "MusicOn/Off"
+[node name="MusicButton" type="TextureButton" parent="."]
+margin_left = -462.0
+margin_top = 300.0
+margin_right = 562.0
+margin_bottom = 1324.0
+rect_scale = Vector2( 0.05, 0.05 )
+texture_normal = ExtResource( 8 )
 script = ExtResource( 5 )
 
 [node name="vignette" type="Sprite" parent="."]

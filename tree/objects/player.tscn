@@ -9,7 +9,7 @@
 [ext_resource path="res://art/button_fullscreen.png" type="Texture" id=7]
 [ext_resource path="res://art/button_back.png" type="Texture" id=8]
 [ext_resource path="res://art/button_restart.png" type="Texture" id=9]
-[ext_resource path="res://art/button_unmuted.png" type="Texture" id=10]
+[ext_resource path="res://art/button_music.png" type="Texture" id=10]
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
@@ -49,7 +49,7 @@ radius = 40.0
 height = 0.0
 
 [node name="player" type="KinematicBody2D"]
-position = Vector2( -127, -74 )
+position = Vector2( -125, -73 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -58,7 +58,7 @@ __meta__ = {
 [node name="butterflysprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 1
+frame = 2
 speed_scale = 0.777
 playing = true
 
@@ -107,9 +107,9 @@ texture_normal = ExtResource( 7 )
 script = ExtResource( 5 )
 
 [node name="RestartButton" type="TextureButton" parent="."]
-margin_left = -1004.0
+margin_left = -1006.0
 margin_top = -191.0
-margin_right = 19.9999
+margin_right = 18.0
 margin_bottom = 833.0
 rect_rotation = -93.3
 rect_scale = Vector2( 0.05, 0.05 )
@@ -124,8 +124,13 @@ margin_top = 300.0
 margin_right = 562.0
 margin_bottom = 1324.0
 rect_scale = Vector2( 0.05, 0.05 )
-texture_normal = ExtResource( 10 )
 script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="MusicButton"]
+position = Vector2( 180, 500 )
+scale = Vector2( 1.56949, 1.56949 )
+texture = ExtResource( 10 )
+hframes = 2
 
 [node name="vignette" type="Sprite" parent="."]
 visible = false

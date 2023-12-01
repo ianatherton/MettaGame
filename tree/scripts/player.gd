@@ -19,8 +19,10 @@ func _ready(): ###room start###
 	GameManager.wisps = 0
 	if GameManager.mute == false:
 		$AudioStreamPlayer.playing = true
+		$MusicButton/Sprite.frame = 1
 	else:
 		$AudioStreamPlayer.playing = false
+		$MusicButton/Sprite.frame = 0
 	if SaveFile.game_data.has("fullscreenSetting"):
 		if SaveFile.game_data["fullscreenSetting"] == 1:
 			OS.set_window_fullscreen(true)
@@ -72,9 +74,11 @@ func _on_MusicButton_pressed():
 		SaveFile.game_data["musicSetting"] = 1
 		SaveFile.save_data()
 		$AudioStreamPlayer.playing = false
+		$MusicButton/Sprite.frame = 0
 	else:
 		GameManager.mute = false
 		SaveFile.game_data["musicSetting"] = 0
 		SaveFile.save_data()
 		$AudioStreamPlayer.playing = true
+		$MusicButton/Sprite.frame = 1
 	

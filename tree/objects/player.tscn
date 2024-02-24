@@ -56,9 +56,10 @@ __meta__ = {
 }
 
 [node name="butterflysprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.9, 0.9 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 2
+frame = 1
 speed_scale = 0.777
 playing = true
 

@@ -138,6 +138,12 @@ position = Vector2( 2, -2 )
 scale = Vector2( 1.216, 1.216 )
 texture = ExtResource( 6 )
 
+[node name="fps_label" type="Label" parent="."]
+margin_left = -614.0
+margin_top = 265.0
+margin_right = -574.0
+margin_bottom = 279.0
+
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="FullscreenButton" to="." method="_on_FullscreenButton_pressed"]
 [connection signal="pressed" from="RestartButton" to="." method="_on_RestartButton_pressed"]

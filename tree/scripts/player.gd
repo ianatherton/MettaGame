@@ -1,6 +1,7 @@
 extends KinematicBody2D
 export var speed = 125
 onready var game_data = SaveFile.game_data
+onready var fps_label = $fps_label
 
 var velocity = Vector2.ZERO
 var sprite
@@ -13,6 +14,7 @@ func backScreen():
 		SceneTransition.change_scene("res://levels/menu.tscn")
 ###--------------------------------------------------------###
 func _ready(): ###room start###
+	fps_label.text = "FPS: 0" # fps debug info
 	sprite = $butterflysprite
 	print('player ready!')
 	GameManager.breathewisps = 0
@@ -30,6 +32,7 @@ func _ready(): ###room start###
 			OS.set_window_fullscreen(false)
 
 func _process(delta): ###every frame###
+	fps_label.text = "FPS: " + str(Engine.get_frames_per_second())
 	var mouse_pos = get_global_mouse_position() # Calculate the direction vector towards the mouse
 	var direction = (mouse_pos - global_position).normalized()
 	if Input.is_action_just_pressed("escape"):

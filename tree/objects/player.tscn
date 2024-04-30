@@ -98,7 +98,7 @@ __meta__ = {
 }
 
 [node name="FullscreenButton" type="TextureButton" parent="."]
-margin_left = -567.0
+margin_left = -566.0
 margin_top = 300.0
 margin_right = 457.0
 margin_bottom = 1324.0
@@ -107,7 +107,7 @@ texture_normal = ExtResource( 7 )
 script = ExtResource( 5 )
 
 [node name="RestartButton" type="TextureButton" parent="."]
-margin_left = -1006.0
+margin_left = -1004.0
 margin_top = -191.0
 margin_right = 18.0
 margin_bottom = 833.0
@@ -119,9 +119,9 @@ texture_normal = ExtResource( 9 )
 script = ExtResource( 5 )
 
 [node name="MusicButton" type="TextureButton" parent="."]
-margin_left = -462.0
+margin_left = -454.0
 margin_top = 300.0
-margin_right = 562.0
+margin_right = 277.0
 margin_bottom = 1324.0
 rect_scale = Vector2( 0.05, 0.05 )
 script = ExtResource( 5 )
